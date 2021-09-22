@@ -1,0 +1,34 @@
+@import "./reset.scss";
+
+$main-red: #ff0000;
+@mixin 함수() {
+  background-color: #eeeeee;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+}
+.wow-enter {
+  opacity: 0;
+}
+.wow-enter-active {
+  opacity: 1;
+  transition: all 500ms;
+}
+.hidden {
+  display: none;
+}
+.red {
+  color: $main-red;
+}
+.my-alert {
+  @include 함수();
+  p {
+    margin-bottom: 0;
+  }
+}
+.my-alert-red {
+  @extend .my-alert;
+  background-color: rgba($main-red, 0.2);
+}
